@@ -1,5 +1,5 @@
 # Copyright 2020-2021 The MathWorks, Inc
-name: Release to PyPI
+name: Release to PyPI distribution
 
 on:
   release:
