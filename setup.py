@@ -50,7 +50,7 @@ HERE = Path(__file__).parent.resolve()
 long_description = (HERE / "README.md").read_text()
 
 setuptools.setup(
-    name="matlab-web-desktop-proxy",
+    name="dummy-core",
     version="0.2.0",
     url=default_config["url"],
     author="The MathWorks, Inc.",
