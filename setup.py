@@ -51,7 +51,7 @@ long_description = (HERE / "README.md").read_text()
 
 setuptools.setup(
     name="dummy-core",
-    version="0.5.4",
+    version="0.5.5",
     url=default_config["url"],
     author="The MathWorks, Inc.",
     # TODO: Update email
