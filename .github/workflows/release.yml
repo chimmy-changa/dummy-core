@@ -90,11 +90,11 @@ jobs:
 
       - name: Publish to Anaconda.
         env:
-          ANACONDA_API_TOKEN: ${{secrets.ANACONDA_API_TOKEN}}
+          ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
 
         run: |
           #  $CONDA is an environment variable pointing to the root of the miniconda directory          
           echo $CONDA/bin >> $GITHUB_PATH
-          conda install conda-build
-          conda install anaconda-client
+          conda install -y conda-build
+          conda install -y anaconda-client
           anaconda upload dist/*.tar.gz
