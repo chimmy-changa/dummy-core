@@ -89,12 +89,13 @@ jobs:
       #     repository_url: https://upload.pypi.org/legacy/
 
       - name: Publish to Anaconda.
+        shell: bash -l {0}
         env:
           ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
 
         run: |
           #  $CONDA is an environment variable pointing to the root of the miniconda directory          
-          echo $CONDA/bin >> $GITHUB_PATH
+          # echo $CONDA/bin >> $GITHUB_PATH
           conda install -y conda-build
           conda install -y anaconda-client
-          $CONDA/bin/anaconda upload dist/*.tar.gz
+          anaconda upload dist/*.tar.gz
