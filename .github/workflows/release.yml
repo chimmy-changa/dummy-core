@@ -80,13 +80,13 @@ jobs:
       - name: Build Source and Binary wheel distributions
         run: python setup.py bdist_wheel sdist
 
-      - name: Publish to PyPI.
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          verbose: true
-          password: ${{ secrets.PYPI_TOKEN }}
-          repository_url: https://upload.pypi.org/legacy/
+      # - name: Publish to PyPI.
+      #   uses: pypa/gh-action-pypi-publish@release/v1
+      #   with:
+      #     user: __token__
+      #     verbose: true
+      #     password: ${{ secrets.PYPI_TOKEN }}
+      #     repository_url: https://upload.pypi.org/legacy/
 
       - name: Publish to Anaconda.
         env:
