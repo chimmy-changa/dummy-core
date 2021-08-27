@@ -97,4 +97,4 @@ jobs:
           echo $CONDA/bin >> $GITHUB_PATH
           conda install -y conda-build
           conda install -y anaconda-client
-          $CONDA/bin/anaconda upload dist/*.tar.gz\
+          $CONDA/bin/anaconda upload --label main dist/*.tar.gz\
