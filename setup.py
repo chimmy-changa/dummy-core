@@ -39,11 +39,9 @@ tests_require = [
     "pytest-env",
     "pytest-cov",
     "pytest-mock",
-    "pytest-dependency",
     "pytest-aiohttp",
     "requests",
     "psutil",
-    "aioresponses",
 ]
 
 HERE = Path(__file__).parent.resolve()
@@ -51,7 +49,7 @@ long_description = (HERE / "README.md").read_text()
 
 setuptools.setup(
     name="dummy-core",
-    version="0.5.7",
+    version="0.5.8",
     url=default_config["url"],
     author="The MathWorks, Inc.",
     # TODO: Update email
